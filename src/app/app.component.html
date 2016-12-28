@@ -1,0 +1,23 @@
+<div *ngIf="!toggleForm">
+  <button (click)="toggleForm = !toggleForm">Begin ></button>
+</div>
+
+<div *ngIf="toggleForm">
+  <form *ngIf="counter !== 2">
+    <div *ngIf="counter == 0">
+      <label for="firstname">First Name
+        <input type="text" id="firstname" name="firstname" [(ngModel)]="firstName">
+      </label>
+    </div>
+    <div *ngIf="counter == 1">
+      <label for="lastname">Last Name
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastName">
+      </label>
+    </div>
+    <button (click)="incrementCounter(); $event.preventDefault();">Next</button>
+  </form>
+</div>
+
+<div *ngIf="counter == 2">
+  {{ firstName }} {{ lastName }}
+</div>
