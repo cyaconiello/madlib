@@ -1,82 +1,79 @@
 <main>
 <div *ngIf="!toggleForm">
 <h1 class="heading-1">2017 Digital Experiences</h1>
-<p>This is some copy that talks about what
-we’re going to be generating and relates it
-to the mad lib without saying mad lib so
-there’s no copyright infringement.</p>
+<p class="paragraph">This is some copy that talks about what we’re going to be generating and relates it to the mad lib without saying mad lib so there’s no copyright infringement.</p>
   <button (click)="toggleForm = !toggleForm">Begin ></button>
 </div>
 
 <div *ngIf="toggleForm">
   <form *ngIf="counter !== 14">
     <div *ngIf="counter == 0">
-      <label for="adj-1">1. Choose an adjective to enter below
+      <label for="adj-1" class="paragraph"><span class="number">1.</span> Choose an adjective to enter below
         <input type="text" id="adj-1" name="adj-1" [(ngModel)]="adjOne">
       </label>
     </div>
     <div *ngIf="counter == 1">
-      <label for="pnoun-2">2. Choose a plural noun to enter below
+      <label for="pnoun-2" class="paragraph"><span class="number">2.</span> Choose a plural noun to enter below
         <input type="text" id="pnoun-2" name="pnoun-2" [(ngModel)]="pnounTwo">
       </label>
     </div>
     <div *ngIf="counter == 2">
-      <label for="pnoun-3">3. Choose a plural noun to enter below
+      <label for="pnoun-3" class="paragraph"><span class="number">3.</span> Choose a plural noun to enter below
         <input type="text" id="pnoun-3" name="pnoun-3" [(ngModel)]="pnounThree">
       </label>
     </div>
     <div *ngIf="counter == 3">
-      <label for="verb-4">4. Choose a verb to enter below
+      <label for="verb-4" class="paragraph"><span class="number">4.</span> Choose a verb to enter below
         <input type="text" id="verb-4" name="verb-4" [(ngModel)]="verbFour">
       </label>
     </div>
     <div *ngIf="counter == 4">
-      <label for="noun-5">5. Choose a noun to enter below
+      <label for="noun-5" class="paragraph"><span class="number">5.</span> Choose a noun to enter below
         <input type="text" id="noun-5" name="noun-5" [(ngModel)]="nounFive">
       </label>
     </div>
     <div *ngIf="counter == 5">
-      <label for="verb-6">6. Choose a verb ending in -ing to enter below
+      <label for="verb-6" class="paragraph"><span class="number">6.</span> Choose a verb ending in -ing to enter below
         <input type="text" id="verb-6" name="verb-6" [(ngModel)]="verbSix">
       </label>
     </div>
     <div *ngIf="counter == 6">
-      <label for="verb-7">7. Choose a verb to enter below
+      <label for="verb-7" class="paragraph"><span class="number">7.</span> Choose a verb to enter below
         <input type="text" id="verb-7" name="verb-7" [(ngModel)]="verbSeven">
       </label>
     </div>
     <div *ngIf="counter == 7">
-      <label for="noun-8">8. Choose a noun to enter below
+      <label for="noun-8" class="paragraph"><span class="number">8.</span> Choose a noun to enter below
         <input type="text" id="noun-8" name="noun-8" [(ngModel)]="nounEight">
       </label>
     </div>
     <div *ngIf="counter == 8">
-      <label for="adj-9">9. Choose an adjective to enter below
+      <label for="adj-9" class="paragraph"><span class="number">9.</span> Choose an adjective to enter below
         <input type="text" id="adj-9" name="adj-9" [(ngModel)]="adjNine">
       </label>
     </div>
     <div *ngIf="counter == 9">
-      <label for="adj-10">10. Choose an adjective to enter below
+      <label for="adj-10" class="paragraph"><span class="number">10.</span> Choose an adjective to enter below
         <input type="text" id="adj-10" name="adj-10" [(ngModel)]="adjTen">
       </label>
     </div>
     <div *ngIf="counter == 10">
-      <label for="pnoun-11">11. Choose a plural noun to enter below
+      <label for="pnoun-11" class="paragraph"><span class="number">11.</span> Choose a plural noun to enter below
         <input type="text" id="pnoun-11" name="pnoun-11" [(ngModel)]="pnounEleven">
       </label>
     </div>
     <div *ngIf="counter == 11">
-      <label for="pnoun-12">12. Choose a plural noun to enter below
+      <label for="pnoun-12" class="paragraph"><span class="number">12.</span> Choose a plural noun to enter below
         <input type="text" id="pnoun-12" name="pnoun-12" [(ngModel)]="pnounTwelve">
       </label>
     </div>
     <div *ngIf="counter == 12">
-      <label for="oc-13">13. Choose an occupational category to enter below
+      <label for="oc-13" class="paragraph"><span class="number">13.</span> Choose an occupational category to enter below
         <input type="text" id="oc-13" name="oc-13" [(ngModel)]="occupationThirteen">
       </label>
     </div>
     <div *ngIf="counter == 13">
-      <label for="adj-14">14. Choose an adjective to enter below
+      <label for="adj-14" class="paragraph"><span class="number">14.</span> Choose an adjective to enter below
         <input type="text" id="adj-14" name="adj-14" [(ngModel)]="adjFourteen">
       </label>
     </div>
@@ -85,9 +82,8 @@ there’s no copyright infringement.</p>
 </div>
 
 <div *ngIf="counter == 14">
-  <p>Two of the most {{ adjOne }} things 2017 will bring to digital experiences are {{ pnounTwo }}
-  and {{ pnounThree }}. Even now, it's hard to believe that we can use a mobile phone to {{ verbFour }} our {{ nounFive }} with the touch of a finger. With technology and design {{ verbSix }} like they are, I really believe we will be able to {{ verbSeven }} our {{ nounEight }} with our phones by the end of the year. How {{ adjNine }}! </p>
-  <p>The trends in web design will also evolve to be more {{ adjTen }} as users demand {{ pnounEleven }} from the brands they love. Developers will create {{ pnounTwelve }} that push the limits of the {{ occupationThirteen }} industry. Looking forward to {{ adjFourteen }} things to come in 2017!</p>
+  <p class="story">Two of the most <span class="highlight">{{ adjOne }}</span> things 2017 will bring to digital experiences are <span class="highlight">{{ pnounTwo }}</span> and <span class="highlight">{{ pnounThree }}</span>. Even now, it's hard to believe that we can use a mobile phone to <span class="highlight">{{ verbFour }}</span> our <span class="highlight">{{ nounFive }}</span> with the touch of a finger. With technology and design <span class="highlight">{{ verbSix }}</span> like they are, I really believe we will be able to <span class="highlight">{{ verbSeven }}</span> our <span class="highlight">{{ nounEight }}</span> with our phones by the end of the year. How <span class="highlight">{{ adjNine }}</span>!</p>
+  <p class="story">The trends in web design will also evolve to be more <span class="highlight">{{ adjTen }}</span> as users demand <span class="highlight">{{ pnounEleven }}</span> from the brands they love. Developers will create <span class="highlight">{{ pnounTwelve }}</span> that push the limits of the <span class="highlight">{{ occupationThirteen }}</span> industry. Looking forward to <span class="highlight">{{ adjFourteen }}</span> things to come in 2017!</p>
   <a href="#">Create a New Story</a>
   <a href="javascript:window.print()">Print</a>
 </div>

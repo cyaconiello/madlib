@@ -1,5 +1,70 @@
+/* Color Variables */
+
+$light-blue: #00A1E0;
+
+/* Type Variables */
+
+$adelle: "adelle"; /* 3,7 italic */
+$proxima: "proxima-nova"; /* 7,9 */
+
+/* Type Mixins */
+
+@mixin adelle($size, $weight, $style) {
+  font-family: $adelle;
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+}
+
+@mixin proxima($size, $weight, $style) {
+  font-family: $proxima;
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+}
+
 /* Type Styles */
 
 .heading-1 {
-	color: red;
+	@include proxima(5rem, 900, normal);
+
+	border-bottom: 1px solid $light-blue;
+	border-top: 1px solid $light-blue;
+	line-height: 4.5rem;
+	margin: .5rem 0;
+	padding: 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	@include adelle(1.5rem, 300, normal);
+
+	line-height: 2rem;
+	padding: 0;
+
+	.number {
+		color: $light-blue;
+	}
+}
+
+.story {
+	@include adelle(1.5rem, 300, normal);
+
+	line-height: 2.3rem;
+	padding: 0;
+
+	.highlight {
+		@include adelle(1.5rem, 700, italic);
+
+		border-bottom: 2px solid $light-blue;
+	}
+}
+
+input {
+	border-radius: 4px;
+	border-style: none;
+	height: 55px;
+	margin: 2rem 0;
+	width: 100%;
 }
