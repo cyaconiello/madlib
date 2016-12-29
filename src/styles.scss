@@ -15,18 +15,13 @@ svg {
 }
 
 html {
-  // background: 
-  // 	radial-gradient(
-  // 		ellipse at center, 
-  // 		$medium-blue 0%, 
-  // 		darken($medium-blue, 50%) 100%
-  // 		);
   background:
   	radial-gradient(
   		circle at center,
   		$medium-blue,
   		$dark-blue
   		);
+  	color: white;
   overflow: hidden;
 } 
 
