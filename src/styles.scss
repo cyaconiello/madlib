@@ -4,6 +4,7 @@
 /* Global Color Variables */
 $medium-blue: #005db9;
 $dark-blue: #00182f;
+$opaque-navy: rgba(0, 13, 25, 0.65);
 
 svg {
   position: absolute;
@@ -21,10 +22,38 @@ html {
   		$medium-blue,
   		$dark-blue
   		);
-  	color: white;
+  color: white;
+  font-size: 16px;
+  height: 100%;
   overflow: hidden;
-} 
+}
 
-// html {
-// 	background-color: $medium-blue;
-// }
+body {
+	height: 100%;
+	margin: 0 auto;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 595px;
+	padding-top: 5rem;
+	width: 50%;
+}
+
+/* Footer */
+
+footer {
+	background-color: $opaque-navy;
+	bottom: 0;
+	height: 90px;
+	position: fixed;
+	width: 100%;
+
+	.logo {
+		display: inline-block;
+		float: right;
+		height: 85%;
+		padding: .35rem .5rem;
+		vertical-align: middle;
+	}
+}
