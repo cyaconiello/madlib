@@ -1,5 +1,10 @@
 
 /* You can add global styles to this file, and also import other style files */
+
+/* Global Color Variables */
+$medium-blue: #005db9;
+$dark-blue: #00182f;
+
 svg {
   position: absolute;
   top: 0;
@@ -8,12 +13,23 @@ svg {
   bottom: 0;
   z-index: -1;
 }
-$colors: (
-  #005db9,
-);
-$color: nth($colors, random(length($colors)));
 
 html {
-  background: radial-gradient(ellipse at center, $color 0%, darken($color, 50%) 100%);
+  // background: 
+  // 	radial-gradient(
+  // 		ellipse at center, 
+  // 		$medium-blue 0%, 
+  // 		darken($medium-blue, 50%) 100%
+  // 		);
+  background:
+  	radial-gradient(
+  		circle at center,
+  		$medium-blue,
+  		$dark-blue
+  		);
   overflow: hidden;
 } 
+
+// html {
+// 	background-color: $medium-blue;
+// }
