@@ -1,11 +1,19 @@
+
 /* You can add global styles to this file, and also import other style files */
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+$colors: (
+  #005db9,
+);
+$color: nth($colors, random(length($colors)));
 
-/* Colors */
-
-$med-blue: #005db9;
-
-/* SVG Animating Background */
-
-// html {
-// 	background-color: $dark-blue;
-// }
+html {
+  background: radial-gradient(ellipse at center, $color 0%, darken($color, 50%) 100%);
+  overflow: hidden;
+} 
