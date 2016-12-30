@@ -1,5 +1,26 @@
-
 /* You can add global styles to this file, and also import other style files */
+
+/* Media Queries */
+
+$no-mq-support: false !default;
+$no-mq-threshold: 1200px;
+@mixin mediaQuery($width: 0, $height: false) {
+    @if $no-mq-support{
+        @if $width < $no-mq-threshold{
+            @content;
+        }
+    } @else {
+        @if $height {
+            @media ( min-width: + $width ) and ( min-height: + $height ) {
+                @content;
+            }
+        }@else{
+            @media ( min-width: + $width ) {
+                @content;
+            }
+        }
+    }
+}
 
 /* Global Color Variables */
 
@@ -39,19 +60,31 @@ html {
   color: white;
   font-size: 16px;
   height: 100%;
-  overflow: hidden;
+  
+  // overflow: hidden;
 }
 
 body {
-	height: 100%;
 	margin: 0 auto;
+
+	// height: 100%;
 }
 
 main {
-	margin: 0 auto;
-	max-width: 595px;
-	padding-top: 5rem;
-	width: 50%;
+	margin-top: 1rem;
+	padding: 1rem;
+
+	@include mediaQuery(400px){
+		margin: 0 auto;
+		width: 85%;
+	}
+
+	@include mediaQuery(700px){
+		max-width: 595px;
+		padding-top: 5rem;
+	}
+
+	// width: 50%;
 }
 
 button {
@@ -75,10 +108,14 @@ button {
 
 footer {
 	background-color: $opaque-navy;
-	bottom: 0;
-	height: 90px;
-	position: fixed;
 	width: 100%;
+
+	bottom: 0;
+	position: fixed;
+
+	@include mediaQuery(550px){
+		height: 90px;
+	}
 
 	.text {
 		@include proxima(1rem, 900, normal);

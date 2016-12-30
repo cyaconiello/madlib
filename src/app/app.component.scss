@@ -1,3 +1,25 @@
+/* Media Queries */
+
+$no-mq-support: false !default;
+$no-mq-threshold: 1200px;
+@mixin mediaQuery($width: 0, $height: false) {
+    @if $no-mq-support{
+        @if $width < $no-mq-threshold{
+            @content;
+        }
+    } @else {
+        @if $height {
+            @media ( min-width: + $width ) and ( min-height: + $height ) {
+                @content;
+            }
+        }@else{
+            @media ( min-width: + $width ) {
+                @content;
+            }
+        }
+    }
+}
+
 /* Color Variables */
 
 $light-blue: #00A1E0;
@@ -26,22 +48,52 @@ $proxima: "proxima-nova"; /* 7,9 */
 /* Type Styles */
 
 .heading-1 {
-	@include proxima(5rem, 900, normal);
+	@include proxima(2.35rem, 900, normal);
 
 	border-bottom: 1px solid $light-blue;
 	border-top: 1px solid $light-blue;
-	line-height: 4.5rem;
+	line-height: 2.15rem;
 	margin: .5rem 0;
-	padding: 1.5rem;
+	padding: 1rem;
 	text-align: center;
 	text-transform: uppercase;
+
+	@include mediaQuery(400px){
+		font-size: 3rem;
+		line-height: 2.5rem;
+		margin-top: 1rem;
+	}
+
+	@include mediaQuery(500px){
+		font-size: 3.75rem;
+		line-height: 3.25rem;
+	}
+
+	@include mediaQuery(580px){
+		font-size: 4.25rem;
+		line-height: 3.75rem;
+	}
+
+	@include mediaQuery(675px){
+		font-size: 5rem;
+		line-height: 4.5rem;
+		padding: 1.5rem;
+	}
 }
 
 .paragraph {
-	@include adelle(1.5rem, 300, normal);
+	@include adelle(1.15rem, 300, normal);
 
-	line-height: 2rem;
-	padding: 0;
+	line-height: 1.75rem;
+	padding: .5rem 0;
+
+	@include mediaQuery(400px){
+		font-size: 1.35rem;
+	}
+
+	// font-size: 1.5rem;
+	// line-height: 2rem;
+	// padding: 0;
 
 	.number {
 		color: $light-blue;
@@ -49,16 +101,34 @@ $proxima: "proxima-nova"; /* 7,9 */
 }
 
 .story {
-	@include adelle(1.5rem, 300, normal);
+	@include adelle(1.15rem, 300, normal);
 
-	line-height: 2.3rem;
+	line-height: 1.75rem;
 	padding: 0;
 
+	@include mediaQuery(400px){
+		font-size: 1.35rem;
+		line-height: 2rem;
+	}
+
+	// font-size: 1.5rem;
+	// line-height: 2.3rem;
+
 	.highlight {
-		@include adelle(1.5rem, 700, italic);
+		@include adelle(1.15rem, 700, italic);
 
 		border-bottom: 2px solid $light-blue;
+
+		@include mediaQuery(400px){
+			font-size: 1.35rem;
+		}
+
+		// font-size: 1.5rem;
 	}
+}
+
+form {
+	margin-top: 1rem;
 }
 
 input {
@@ -68,8 +138,11 @@ input {
 	border-style: none;
 	height: 50px;
 	margin: 2rem 0;
-	padding-left: .5rem;
 	width: 100%;
+
+	&::placeholder {
+		padding-left: .5rem;
+	}
 }
 
 .links {
@@ -83,7 +156,9 @@ input {
 	border-radius: 4px;
 	border-style: none;
 	color: white;
+	display: inline-block;
 	letter-spacing: 1px;
+	margin-bottom: 1rem;
 	margin-right: .75rem;
 	padding: .75rem 1rem;
 	text-decoration: none;
