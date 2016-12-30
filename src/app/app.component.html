@@ -79,6 +79,7 @@
     </div>
     <button (click)="incrementCounter(); $event.preventDefault();">Next</button>
   </form>
+  <div *ngIf="0 <= counter && counter !== 14" class="progress-bar" style="height: 14px;background: pink;"><span [ngClass]="setClasses()"></span></div>
 </div>
 
 <div *ngIf="counter == 14">

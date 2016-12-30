@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   toggleForm: boolean;
+  width: any;
   counter: number;
   adjOne: string;
   pnounTwo: string;
@@ -24,6 +25,8 @@ export class AppComponent implements OnInit {
   occupationThirteen: string;
   adjFourteen: string;
 
+  constructor() { }
+
   ngOnInit() {
     this.toggleForm = false;
     this.counter = 0;
@@ -31,6 +34,26 @@ export class AppComponent implements OnInit {
 
   incrementCounter() {
     this.counter++;
+  }
+
+  setClasses() {
+    let classes = {
+      'zero': (this.counter == 0),
+      'one': (this.counter == 1),
+      'two': (this.counter == 2),
+      'three': (this.counter == 3),
+      'four': (this.counter == 4),
+      'five': (this.counter == 5),
+      'six': (this.counter == 6),
+      'seven': (this.counter == 7),
+      'eight': (this.counter == 8),
+      'nine': (this.counter == 9),
+      'ten': (this.counter == 10),
+      'eleven': (this.counter == 11),
+      'twelve': (this.counter == 12),
+      'thirteen': (this.counter == 13)
+    };
+    return classes;
   }
 
   reset() {
