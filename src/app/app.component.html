@@ -82,12 +82,12 @@
   <div *ngIf="0 <= counter && counter !== 14" class="progress-bar" style="height: 14px;background: pink;"><span [ngClass]="setClasses()"></span></div>
 </div>
 
-<div *ngIf="counter == 14">
+<div id="print-this" *ngIf="counter == 14">
   <p class="story">Two of the most <span class="highlight">{{ adjOne }}</span> things 2017 will bring to digital experiences are <span class="highlight">{{ pnounTwo }}</span> and <span class="highlight">{{ pnounThree }}</span>. Even now, it's hard to believe that we can use a mobile phone to <span class="highlight">{{ verbFour }}</span> our <span class="highlight">{{ nounFive }}</span> with the touch of a finger. With technology and design <span class="highlight">{{ verbSix }}</span> like they are, I really believe we will be able to <span class="highlight">{{ verbSeven }}</span> our <span class="highlight">{{ pnounEight }}</span> with our phones by the end of the year. How <span class="highlight">{{ adjNine }}</span>!</p>
   <p class="story">The trends in web design will also evolve to be more <span class="highlight">{{ adjTen }}</span> as users demand <span class="highlight">{{ pnounEleven }}</span> from the brands they love. Developers will create <span class="highlight">{{ pnounTwelve }}</span> that push the limits of the <span class="highlight">{{ occupationThirteen }}</span> industry. Looking forward to <span class="highlight">{{ adjFourteen }}</span> things to come in 2017!</p>
   <div class="links">
     <a href="#" (click)="reset()"class="link">Create a New Story</a>
-    <a href="javascript:window.print()" class="link">Print</a>
+    <a  (click)="printDiv()" class="link">Print</a> <!-- href="javascript:window.print()" -->
   </div>
 </div>
 </main>
