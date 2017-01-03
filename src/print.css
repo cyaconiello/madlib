@@ -1,0 +1,17 @@
+/* Print Styles */
+
+@page {
+	size: 8.5in 11in;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: black;
+}
+
+.highlight {
+	border-color: #848484;
+}
+
+.links {
+	display: none;
+}
