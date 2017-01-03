@@ -60,14 +60,10 @@ html {
   color: white;
   font-size: 16px;
   height: 100%;
-  
-  // overflow: hidden;
 }
 
 body {
 	margin: 0 auto;
-
-	// height: 100%;
 }
 
 main {
@@ -81,10 +77,8 @@ main {
 
 	@include mediaQuery(700px){
 		max-width: 595px;
-		padding-top: 5rem;
+		padding-top: 2.5rem;
 	}
-
-	// width: 50%;
 }
 
 button {
@@ -123,15 +117,56 @@ footer {
 		color: $light-gray;
 		float: left;
 		letter-spacing: 2px;
-		padding: 1.25rem 2rem;
+		line-height: 1rem;
+		margin: 0;
+		padding: 1rem 0 1rem 1rem;
+		text-align: center;
 		text-transform: uppercase;
+		width: 90px;
+		word-break: break-all;
+
+		@include mediaQuery(500px){
+			padding-top: 1.5rem;
+			text-align: left;
+			width: 40%;
+		}
+
+		@include mediaQuery(550px){
+			padding: 2.3rem 0 2.3rem 2.3rem;
+		}
+	}
+
+	a {
+		float: right;
+		height: 100%;
+		width: 65%;
+
+		@include mediaQuery(500px){
+			width: 50%;
+		}
+
+		@include mediaQuery(675px){
+			width: 40%;
+		}
+
+		@include mediaQuery(800px){
+			width: 300px;
+		}
 	}
 
 	.logo {
 		display: inline-block;
 		float: right;
-		height: 85%;
-		padding: .35rem .5rem;
-		vertical-align: middle;
+		padding-top: .35rem;
+		margin: 0 auto;
+		width: 100%;
+
+		@include mediaQuery(375px){
+			padding-top: 0;
+		}
+
+		@include mediaQuery(550px){
+			padding: .5rem;
+		}
 	}
 }

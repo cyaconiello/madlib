@@ -23,6 +23,10 @@ $no-mq-threshold: 1200px;
 /* Color Variables */
 
 $light-blue: #00A1E0;
+$medium-blue: #005db9;
+$dark-blue: #00182f;
+$opaque-navy: rgba(0, 13, 25, 0.65);
+$light-gray: #DBDBDB;
 
 /* Type Variables */
 
@@ -77,6 +81,7 @@ $proxima: "proxima-nova"; /* 7,9 */
 	@include mediaQuery(675px){
 		font-size: 5rem;
 		line-height: 4.5rem;
+		margin-top: 5rem;
 		padding: 1.5rem;
 	}
 }
@@ -91,9 +96,11 @@ $proxima: "proxima-nova"; /* 7,9 */
 		font-size: 1.35rem;
 	}
 
-	// font-size: 1.5rem;
-	// line-height: 2rem;
-	// padding: 0;
+	@include mediaQuery(700px){
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding: 0;
+	}
 
 	.number {
 		color: $light-blue;
@@ -101,18 +108,15 @@ $proxima: "proxima-nova"; /* 7,9 */
 }
 
 .story {
-	@include adelle(1.15rem, 300, normal);
-
-	line-height: 1.75rem;
-	padding: 0;
+	@extend .paragraph;
 
 	@include mediaQuery(400px){
-		font-size: 1.35rem;
 		line-height: 2rem;
 	}
 
-	// font-size: 1.5rem;
-	// line-height: 2.3rem;
+	@include mediaQuery(700px){
+		line-height: 2.3rem;
+	}
 
 	.highlight {
 		@include adelle(1.15rem, 700, italic);
@@ -122,13 +126,11 @@ $proxima: "proxima-nova"; /* 7,9 */
 		@include mediaQuery(400px){
 			font-size: 1.35rem;
 		}
-
-		// font-size: 1.5rem;
 	}
 }
 
 form {
-	margin-top: 1rem;
+	margin-top: 5rem;
 }
 
 input {
@@ -146,7 +148,7 @@ input {
 }
 
 .links {
-	padding-top: 1.5rem;
+	padding-top: 1rem;
 }
 
 .link {
@@ -164,21 +166,53 @@ input {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+/* Progress Bar */
+
 .progress-bar {
-	height: 14px;
-	background: rgba(255, 0, 0, .5);
+
+	height: 10px;
+	background: rgba(255, 255, 255, .25);
 	position: absolute;
-	bottom: 90px;
+	bottom: 64px;
 	left: 0;
 	right: 0;
 	width: 100%;
+	color: red;
+
+	@include mediaQuery(410px){
+		bottom: 68px;
+	}
+
+	@include mediaQuery(430px){
+		bottom: 70px;
+	}
+
+	@include mediaQuery(450px){
+		bottom: 73px;
+	}
+
+	@include mediaQuery(475px){
+		bottom: 78px;
+	}
+
+	@include mediaQuery(500px){
+		bottom: 63px;
+	}
+
+	@include mediaQuery(550px){
+		bottom: 90px;
+	}
+
 	span {
-    position: absolute;
-    bottom: 0;
-    background: purple;
-    left: 0;
-    right: 0;
-    height: 14px;
+	    position: absolute;
+	    bottom: 0;
+	    background: linear-gradient(#28c2ff, $light-blue);
+	    left: 0;
+	    right: 0;
+	    transition: 100ms ease-in-out;
+	    height: 10px;
+
 		&.zero {
 			width: calc( 1/14 * 100% );
 		}

@@ -79,7 +79,7 @@
     </div>
     <button (click)="incrementCounter(); $event.preventDefault();">Next</button>
   </form>
-  <div *ngIf="0 <= counter && counter !== 14" class="progress-bar" style="height: 14px;background: pink;"><span [ngClass]="setClasses()"></span></div>
+  <div *ngIf="0 <= counter && counter !== 14" class="progress-bar"><span [ngClass]="setClasses()"></span></div>
 </div>
 
 <div id="print-this" *ngIf="counter == 14">
@@ -91,3 +91,9 @@
   </div>
 </div>
 </main>
+<footer>
+  <p class="text">#2017CXOracle</p>
+  <a href="http://www.captechconsulting.com/">
+    <img class="logo" src="/assets/captech_logo.png" alt="CapTech Consulting logo">
+  </a>
+</footer>
