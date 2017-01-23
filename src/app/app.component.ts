@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterContentChecked {
 
   toggleForm: boolean;
   width: any;
@@ -30,6 +30,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.toggleForm = false;
     this.counter = 0;
+  }
+
+  ngAfterContentChecked() {
+    if (document.querySelector('input') != null) {
+      document.querySelector('input').focus();
+    }
   }
 
   incrementCounter() {
