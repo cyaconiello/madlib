@@ -77,7 +77,7 @@
         <input type="text" id="adj-14" name="adj-14" [(ngModel)]="adjFourteen" placeholder="e.g. great">
       </label>
     </div>
-    <button (click)="incrementCounter(); $event.preventDefault();">Next</button>
+    <button (click)="incrementCounter(); $event.preventDefault();"><span *ngIf="counter !== 13">Next</span><span *ngIf="counter === 13">Generate Story</span></button>
   </form>
   <div *ngIf="0 <= counter && counter !== 14" class="progress-bar"><span [ngClass]="setClasses()"></span></div>
 </div>
