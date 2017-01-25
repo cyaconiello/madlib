@@ -33,9 +33,9 @@ export class AppComponent implements OnInit, AfterContentChecked {
   }
 
   ngAfterContentChecked() {
-    if (document.querySelector('input') != null) {
-      document.querySelector('input').focus();
-    }
+    // if (document.querySelector('input') != null) {
+    //   document.querySelector('input').focus();
+    // }
   }
 
   incrementCounter() {
