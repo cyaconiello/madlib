@@ -39,7 +39,9 @@ export class AppComponent implements OnInit, AfterContentChecked {
   }
 
   incrementCounter() {
-    this.counter++;
+    if (document.querySelector('input').value !== '') {
+      this.counter++;
+    }
   }
 
   setClasses() {
