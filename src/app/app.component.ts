@@ -124,6 +124,7 @@ main {
       padding-top: 5rem; } }
 
 button {
+  display: none;
   font-family: "proxima-nova";
   font-weight: 700;
   font-style: normal;
@@ -316,6 +317,7 @@ input {
       width: calc( 13/14 * 100%); }
     .progress-bar   span.thirteen {
       width: calc( 14/14 * 100%); }
+    .links { display: none!important;}
 </style>
 `;
 
