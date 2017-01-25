@@ -58,6 +58,10 @@ svg {
   right: 0;
   bottom: 0;
   z-index: -1;
+	display: none;
+	@include mediaQuery(650px){
+		display: block;
+	}
 }
 
 html {
@@ -79,7 +83,7 @@ body {
 main {
 	margin-top: 1rem;
 	padding: 1rem;
-	padding-bottom: 2rem;
+	padding-bottom: 8rem;
 
 	@include mediaQuery(400px){
 		margin: 0 auto;
