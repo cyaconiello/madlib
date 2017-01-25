@@ -30,9 +30,19 @@ $opaque-navy: rgba(0, 13, 25, 0.65);
 $light-gray: #DBDBDB;
 $light-blue: #00A1E0;
 
-/* Type */
+/* Type Variables */
 
+$adelle: "adelle"; /* 3,7 italic */
 $proxima: "proxima-nova"; /* 7,9 */
+
+/* Type Mixins */
+
+@mixin adelle($size, $weight, $style) {
+  font-family: $adelle;
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+}
 
 @mixin proxima($size, $weight, $style) {
   font-family: $proxima;
@@ -69,6 +79,7 @@ body {
 main {
 	margin-top: 1rem;
 	padding: 1rem;
+	padding-bottom: 2rem;
 
 	@include mediaQuery(400px){
 		margin: 0 auto;
@@ -96,6 +107,27 @@ button {
 
 	&:hover {
 		background-color: $medium-blue;
+	}
+}
+
+.paragraph {
+	@include adelle(1.15rem, 300, normal);
+
+	line-height: 1.75rem;
+	padding: .5rem 0;
+
+	@include mediaQuery(400px){
+		font-size: 1.35rem;
+	}
+
+	@include mediaQuery(700px){
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding: 0;
+	}
+
+	.number {
+		color: $light-blue;
 	}
 }
 
