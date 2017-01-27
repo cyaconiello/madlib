@@ -1,79 +1,79 @@
 <main>
 <div *ngIf="!toggleForm">
 <h1 class="heading-1">2017 Digital Experiences</h1>
-<p class="paragraph">This is some copy that talks about what we’re going to be generating and relates it to the mad lib without saying mad lib so there’s no copyright infringement.</p>
+<p class="paragraph">The digital world is morphing at a rapid pace. It’s being driven by the user’s experience and anything is possible! As we welcome 2017, help us fill in the blanks on what could be the best experiences this year!</p>
   <button (click)="toggleForm = !toggleForm">Begin ></button>
 </div>
 
 <div *ngIf="toggleForm">
   <form *ngIf="counter !== 14">
     <div *ngIf="counter == 0">
-      <label for="adj-1" class="paragraph"><span class="number">1.</span> Choose an adjective to enter below
+      <label for="adj-1" class="paragraph"><span class="number">1.</span> Choose an adjective to enter below <span class="number">*</span>
         <input autofocus type="text" id="adj-1" name="adj-1" [(ngModel)]="adjOne" placeholder="e.g. hilarious">
       </label>
     </div>
     <div *ngIf="counter == 1">
-      <label for="pnoun-2" class="paragraph"><span class="number">2.</span> Choose a plural noun to enter below
+      <label for="pnoun-2" class="paragraph"><span class="number">2.</span> Choose a plural noun to enter below <span class="number">*</span>
         <input autofocus type="text" id="pnoun-2" name="pnoun-2" [(ngModel)]="pnounTwo" placeholder="e.g. malfunctions">
       </label>
     </div>
     <div *ngIf="counter == 2">
-      <label for="pnoun-3" class="paragraph"><span class="number">3.</span> Choose a plural noun to enter below
+      <label for="pnoun-3" class="paragraph"><span class="number">3.</span> Choose a plural noun to enter below <span class="number">*</span>
         <input autofocus type="text" id="pnoun-3" name="pnoun-3" [(ngModel)]="pnounThree" placeholder="e.g. chimpanzees">
       </label>
     </div>
     <div *ngIf="counter == 3">
-      <label for="verb-4" class="paragraph"><span class="number">4.</span> Choose a verb to enter below
+      <label for="verb-4" class="paragraph"><span class="number">4.</span> Choose a verb to enter below <span class="number">*</span>
         <input autofocus type="text" id="verb-4" name="verb-4" [(ngModel)]="verbFour" placeholder="e.g. order">
       </label>
     </div>
     <div *ngIf="counter == 4">
-      <label for="noun-5" class="paragraph"><span class="number">5.</span> Choose a noun to enter below
+      <label for="noun-5" class="paragraph"><span class="number">5.</span> Choose a noun to enter below <span class="number">*</span>
         <input autofocus type="text" id="noun-5" name="noun-5" [(ngModel)]="nounFive" placeholder="e.g. lunch">
       </label>
     </div>
     <div *ngIf="counter == 5">
-      <label for="verb-6" class="paragraph"><span class="number">6.</span> Choose a verb ending in -ing to enter below
+      <label for="verb-6" class="paragraph"><span class="number">6.</span> Choose a verb ending in -ing to enter below <span class="number">*</span>
         <input autofocus type="text" id="verb-6" name="verb-6" [(ngModel)]="verbSix" placeholder="e.g. moving">
       </label>
     </div>
     <div *ngIf="counter == 6">
-      <label for="verb-7" class="paragraph"><span class="number">7.</span> Choose a verb to enter below
+      <label for="verb-7" class="paragraph"><span class="number">7.</span> Choose a verb to enter below <span class="number">*</span>
         <input autofocus type="text" id="verb-7" name="verb-7" [(ngModel)]="verbSeven" placeholder="e.g. punch">
       </label>
     </div>
     <div *ngIf="counter == 7">
-      <label for="pnoun-8" class="paragraph"><span class="number">8.</span> Choose a plural noun to enter below
+      <label for="pnoun-8" class="paragraph"><span class="number">8.</span> Choose a plural noun to enter below <span class="number">*</span>
         <input autofocus type="text" id="pnoun-8" name="pnoun-8" [(ngModel)]="pnounEight" placeholder="e.g. bosses">
       </label>
     </div>
     <div *ngIf="counter == 8">
-      <label for="adj-9" class="paragraph"><span class="number">9.</span> Choose an adjective to enter below
+      <label for="adj-9" class="paragraph"><span class="number">9.</span> Choose an adjective to enter below <span class="number">*</span>
         <input autofocus type="text" id="adj-9" name="adj-9" [(ngModel)]="adjNine" placeholder="e.g. exciting">
       </label>
     </div>
     <div *ngIf="counter == 9">
-      <label for="adj-10" class="paragraph"><span class="number">10.</span> Choose an adjective to enter below
+      <label for="adj-10" class="paragraph"><span class="number">10.</span> Choose an adjective to enter below <span class="number">*</span>
         <input autofocus type="text" id="adj-10" name="adj-10" [(ngModel)]="adjTen" placeholder="e.g. needy">
       </label>
     </div>
     <div *ngIf="counter == 10">
-      <label for="pnoun-11" class="paragraph"><span class="number">11.</span> Choose a plural noun to enter below
+      <label for="pnoun-11" class="paragraph"><span class="number">11.</span> Choose a plural noun to enter below <span class="number">*</span>
         <input autofocus type="text" id="pnoun-11" name="pnoun-11" [(ngModel)]="pnounEleven" placeholder="e.g. kittens">
       </label>
     </div>
     <div *ngIf="counter == 11">
-      <label for="pnoun-12" class="paragraph"><span class="number">12.</span> Choose a plural noun to enter below
+      <label for="pnoun-12" class="paragraph"><span class="number">12.</span> Choose a plural noun to enter below <span class="number">*</span>
         <input autofocus type="text" id="pnoun-12" name="pnoun-12" [(ngModel)]="pnounTwelve" placeholder="e.g. water parks">
       </label>
     </div>
     <div *ngIf="counter == 12">
-      <label for="oc-13" class="paragraph"><span class="number">13.</span> Choose an occupational category to enter below
+      <label for="oc-13" class="paragraph"><span class="number">13.</span> Choose an occupational category to enter below <span class="number">*</span>
         <input autofocus type="text" id="oc-13" name="oc-13" [(ngModel)]="occupationThirteen" placeholder="e.g. nursing">
       </label>
     </div>
     <div *ngIf="counter == 13">
-      <label for="adj-14" class="paragraph"><span class="number">14.</span> Choose an adjective to enter below
+      <label for="adj-14" class="paragraph"><span class="number">14.</span> Choose an adjective to enter below <span class="number">*</span>
         <input autofocus type="text" id="adj-14" name="adj-14" [(ngModel)]="adjFourteen" placeholder="e.g. great">
       </label>
     </div>
